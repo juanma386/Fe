@@ -1,0 +1,20 @@
+
+# With the best batteries for all my friends in the network
+
+# EN: Assets Config to htaccess allow media data
+# This line of code is used to authorize the sampling of data for the following files
+# Error 404 media files
+# ES: Esta linea de codigo sirve para autorizar el muestreo de datos para los siguientes archivos
+
+# js, css, mp3, mp4, svg, ico, ttf, woff, woff2, eot, jpg, jpeg, jpe, gif,
+# png, bmp, tif, tiff, doc, pdf, rtf, xls, numbers, odt, pages, key, zip, rar
+
+# ES: Solución con código aquí:
+<Files ~ ".*\..*">
+	Order Allow,Deny
+	Deny from all
+</Files>
+<FilesMatch "\.(js|css|mp3|mp4|svg|ico|ttf|woff|woff2|eot|jpg|jpeg|jpe|gif|png|bmp|tif|tiff|doc|pdf|rtf|xls|numbers|odt|pages|key|zip|rar)$">
+	Order Deny,Allow
+	Allow from all
+</FilesMatch>

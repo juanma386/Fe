@@ -1,0 +1,9 @@
+# This steps work for me:
+# Add this line on your ~/.bashrc or ~/.zshrc
+export TMUX_TMPDIR=~/.tmux/tmp
+# Create folder & change to write mode:
+mkdir -p ~/.tmux/tmp
+chmod 777 -R ~/.tmux/tmp
+# Reload ~/.bashrc or ~/.zshrc
+$SHELL
+byobu
